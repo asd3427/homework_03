@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import SimpleHMM
 
 test_hmm_states = ['title', 'givenname', 'surname']
@@ -53,3 +54,39 @@ test_hmm2.save_hmm('testhmm2.hmm')
 test_hmm3 = simplehmm.hmm('Test HMM 3',  ['dummy'], ['dummy'])
 test_hmm3.load_hmm('testhmm2.hmm')
 test_hmm3.print_hmm()  # Print it out
+=======
+import numpy as np
+import pandas as pd 
+
+
+with open ('hmmData.txt') as f:
+    data = f.read()
+    f.close()
+data=data.split('\n')
+
+
+labeList=[]
+l=[]
+for i in data:
+    n=[]
+    for a in i:
+        n.append(a)
+    l.append(n)
+data= list(l)
+
+#for i in list:
+#    n=[]
+#    for a in i:
+        
+#
+###
+##import numpy as np
+##with open ('hmmData - 複製.txt')  as f :
+##    data = f.read()
+##
+##data =np.array(data)
+#print(data[0:0:1])
+#data= pd.read_csv('hmmData.txt',header =None )
+#print(data)
+
+>>>>>>> ad44a81df77dc6ad206e6eda16f32587c02dcaf3
