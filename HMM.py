@@ -1,20 +1,21 @@
 import numpy as np
 import pandas as pd 
 from hmmlearn import hmm
-
-with open ('hmmData.txt') as f:
-    data = f.read()
-    f.close()
-data=data.split('\n')
-
+try:
+    with open ('hmmData.txt') as f:
+        data = f.read()
+        f.close()
+    data=data.split('\n')
+except:
+    pass
 
 l=[]
 for i in data:
     n=[]
     for a in i:
-        n.append(a)
+        n.append(ord(a))
     l.append(n)
-l= np.array(l)
+print(l)
 
 n_state = ['1','2','3']
 observations=['a','b','c','d']
@@ -22,7 +23,7 @@ n_observations = len(observations)
 cc = hmm.GaussianHMM(n_components=n_state,startprob_prior=l,transmat_prior=l)
 print(cc)
 
-cc.fit()
+cc.fit(l)
 #inpuT = np.array([x for x in input().split()])
 #ll=[]
 #
