@@ -21,7 +21,7 @@ n_state = ['1','2','3']
 observations=['a','b','c','d']
 n_observations = len(observations)
 cc = hmm.GaussianHMM(n_components=n_state,startprob_prior=l,transmat_prior=l)
-print(cc)
+print(;)
 
 cc.fit(l)
 #inpuT = np.array([x for x in input().split()])
